@@ -1,4 +1,13 @@
 {
   // https://github.com/devcontainers/images/blob/main/src/python
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye"
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "runem.lit-plugin"
+      ]
+    }
+  }
 }
