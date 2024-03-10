@@ -4,8 +4,7 @@ import { html } from 'lit';
 import { spread } from '@open-wc/lit-helpers';
 
 const meta: Meta<MyButtonProps> = {
-  title: 'Components/Button',
-  component: 'my-button',
+  title: 'MyButton',
   includeStories: ['Green', 'Red', 'Yellow'],
   render: (props: any) =>
     html`<button is="my-button" ${spread(props)}>Button text</button>`,
