@@ -8,7 +8,7 @@ const meta: Meta<MyButtonProps> = {
   component: 'my-button',
   includeStories: ['Green', 'Red', 'Yellow'],
   render: (props: any) =>
-    html`<button is="my-button" ${spread(props)}>hello</button>`,
+    html`<button is="my-button" ${spread(props)}>Button text</button>`,
 };
 type Story = StoryObj<MyButtonProps>;
 

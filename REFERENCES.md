@@ -3,3 +3,5 @@
 - https://sanderron.de/master-thesis
 - https://github.com/luixaviles/angular-lit-web-components
 - https://github.com/Frameright/image-display-control-web-component
+- https://flowbite.com/docs/components/tables/
+- https://hslpicker.com/

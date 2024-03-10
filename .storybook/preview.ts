@@ -1,15 +1,6 @@
 import { Preview } from '@storybook/web-components';
+import './global.css';
 
-const preview: Preview = {
-  parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-  },
-};
+const preview: Preview = {};
 
 export default preview;
