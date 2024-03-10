@@ -32,11 +32,13 @@ jobs:
         run: npm install --ci
       - name: Prepare deployment
         run: npm run build:storybook
+      - name: Fix permissions
+        run: chmod -c -R +rX storybook-static/
       - name: Upload artifact
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: storybook-static
+          name: github-pages
           path: storybook-static/
           retention-days: 30
   deploy-storybook:
@@ -52,5 +54,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: storybook-static
