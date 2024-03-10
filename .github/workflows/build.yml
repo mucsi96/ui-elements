@@ -34,12 +34,14 @@ jobs:
         run: npm run build:storybook
       - name: Fix permissions
         run: chmod -c -R +rX storybook-static/
+      - name: Create archive
+        run: tar --dereference --hard-dereference --directory storybook-static/ -cvf "$RUNNER_TEMP/storybook-static.tar" .
       - name: Upload artifact
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: storybook-static/
+          path: ${{ runner.temp }}/storybook-static.tar
           retention-days: 30
   deploy-storybook:
     runs-on: ubuntu-latest
