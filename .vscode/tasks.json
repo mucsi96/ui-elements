@@ -6,7 +6,6 @@
 			"script": "start",
 			"problemMatcher": [],
 			"label": "npm: start",
-			"detail": "storybook dev -p 6006"
 		}
 	]
 }

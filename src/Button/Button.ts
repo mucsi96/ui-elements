@@ -1,9 +1,14 @@
-import '@ungap/custom-elements';
 import { css } from 'lit';
+import { customElement } from '../utils';
 
-export class MyButton extends HTMLButtonElement {
-  static tagName = 'my-button';
-  static styles = css`
+export type MyButtonProps = {
+  color: 'green' | 'red' | 'yellow';
+};
+
+@customElement({
+  name: 'my-button',
+  extends: 'button',
+  styles: css`
     :host {
       background-color: var(--button-color);
       border: 1px solid var(--button-color);
@@ -28,23 +33,6 @@ export class MyButton extends HTMLButtonElement {
       --button-color: hsl(42, 93%, 46%);
       --button-hover-color: hsl(37, 97%, 39%);
     }
-  `;
-
-  connectedCallback() {
-    if (
-      document.head.querySelector(`style[data-tagname="${MyButton.tagName}"]`)
-    ) {
-      return this;
-    }
-
-    const style = document.createElement('style');
-    style.innerHTML = MyButton.styles.cssText.replace(
-      /:host/g,
-      `button[is='${MyButton.tagName}']`
-    );
-    style.setAttribute('data-tagname', MyButton.tagName);
-    document.head.append(style);
-  }
-}
-
-window.customElements.define(MyButton.tagName, MyButton, { extends: 'button' });
+  `,
+})
+export class MyButton extends HTMLButtonElement {}

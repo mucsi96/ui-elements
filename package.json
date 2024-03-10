@@ -12,6 +12,7 @@
   "author": "Igor Bari <mucsi96@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@open-wc/lit-helpers": "^0.7.0",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
     "@storybook/blocks": "^7.6.17",
