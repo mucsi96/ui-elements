@@ -1,5 +1,5 @@
 {
-  "name": "ui-elements",
+  "name": "@mucsi96/ui-elements",
   "version": "1.0.0",
   "description": "",
   "module": "dist/index.mjs",

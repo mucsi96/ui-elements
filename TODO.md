@@ -1,4 +1,4 @@
-- publish packge to NPM
+- use publish tools for pages deployment
 - add badge
 - add button
 - add button group

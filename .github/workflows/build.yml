@@ -47,10 +47,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install dependencies
-        run: npm ci
-      - name: Prepare deployment
-        run: npm run build:storybook
+      - run: npm ci
+      - run: npm run build:storybook
       - name: Fix permissions
         run: chmod -c -R +rX storybook-static/
       - name: Create archive
