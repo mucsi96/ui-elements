@@ -1,7 +1,7 @@
 import { css } from 'lit';
 import { customElement } from '../utils';
 
-export type MyButtonProps = {
+export type BTButtonProps = {
   color: 'green' | 'red' | 'yellow';
 };
 
@@ -33,8 +33,8 @@ const styles = css`
 `;
 
 @customElement({
-  name: 'my-button',
+  name: 'bt-button',
   extends: 'button',
   styles,
 })
-export class MyButton extends HTMLButtonElement {}
+export class BTButton extends HTMLButtonElement {}

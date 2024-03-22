@@ -9,6 +9,26 @@ on:
       - '**'
 
 jobs:
+  publish-npm-package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          cache: npm
+          cache-dependency-path: src/package-lock.json
+      - run: pip install -r requirements.txt
+      - run: npm ci
+      - run: npm build
+      - run: python scripts/publish_npm_package.py ${{ secrets.GITHUB_TOKEN }} ${{ secrets.ANSIBLE_VAULT_KEY }}
   build-storybook:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' }}

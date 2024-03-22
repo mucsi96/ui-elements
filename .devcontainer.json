@@ -1,13 +1,21 @@
 {
   // https://github.com/devcontainers/images/blob/main/src/python
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "features": {
+    // https://containers.dev/features
+    // https://github.com/devcontainers/features
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
-        "runem.lit-plugin"
+        "runem.lit-plugin",
+        "GitHub.copilot"
       ]
     }
-  }
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postStartCommand": "git config --global --add safe.directory /workspaces/${localWorkspaceFolderBasename}"
 }

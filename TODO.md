@@ -1,4 +1,3 @@
-- publish storybook to gitlab pages
 - publish packge to NPM
 - add badge
 - add button
