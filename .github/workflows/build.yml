@@ -33,32 +33,26 @@ jobs:
     if: ${{ github.event_name == 'push' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+          cache: pip
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        shell: bash
-        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-      - uses: actions/cache@v4
-        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cache: npm
       - run: npm ci
+      - run: pip install -r requirements.txt
       - run: npm run build:storybook
-      - name: Fix permissions
-        run: chmod -c -R +rX storybook-static/
-      - name: Create archive
-        run: tar --dereference --hard-dereference --directory storybook-static/ -cvf "$RUNNER_TEMP/storybook-static.tar" .
+      - id: pack-test-pages
+        run: python scripts/pack_pages.py
       - name: Upload artifact
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ${{ runner.temp }}/storybook-static.tar
+          path: ${{ steps.pack-test-pages.outputs.artifact }}
           retention-days: 30
   deploy-storybook:
     runs-on: ubuntu-latest
