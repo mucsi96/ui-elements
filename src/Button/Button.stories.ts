@@ -1,11 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
-import { BTButton, BTButtonProps } from './Button';
-import { html } from 'lit';
 import { spread } from '@open-wc/lit-helpers';
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { html } from 'lit';
+import { BTButtonProps } from './Button';
 
 const meta: Meta<BTButtonProps> = {
   title: 'BTButton',
-  includeStories: ['Green', 'Red', 'Yellow'],
   render: (props: any) =>
     html`<button is="bt-button" ${spread(props)}>Button text</button>`,
 };
@@ -30,5 +29,3 @@ export const Yellow: Story = {
     color: 'yellow',
   },
 };
-
-export { BTButton };
