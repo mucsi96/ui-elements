@@ -1,5 +1,7 @@
 import { css, html } from 'lit';
-import { customElement, htmlToString } from './utils';
+import { customElement, htmlToString } from '../utils';
+
+export type BTLoaderProps = {};
 
 @customElement({
   name: 'bt-loader',

@@ -1,5 +1,7 @@
 import { css } from 'lit';
-import { customElement } from './utils';
+import { customElement } from '../utils';
+
+export type BTHeadingProps = {};
 
 @customElement({
   name: 'bt-heading',

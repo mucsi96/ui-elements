@@ -1,5 +1,9 @@
 import { css, html } from 'lit';
-import { customElement, htmlToString } from './utils';
+import { customElement, htmlToString } from '../utils';
+
+export type BTHeaderProps = {
+  title?: string;
+};
 
 @customElement({
   name: 'bt-header',
