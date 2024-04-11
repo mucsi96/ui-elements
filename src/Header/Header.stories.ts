@@ -6,8 +6,11 @@ const meta: Meta<BTHeaderProps> = {
   title: 'BTHeader',
   render: () =>
     html`<header is="bt-header" title="Header title">
-      <div>child text</div>
-    </header>`,
+        <h6 is="bt-heading">child text</h6>
+      </header>
+      <main is="bt-main">
+        <h1 is="bt-heading">main text</h1>
+      </main>`,
 };
 type Story = StoryObj<BTHeaderProps>;
 

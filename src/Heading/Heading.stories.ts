@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 import { BTHeadingProps } from './Heading';
+import { mainDecorator } from '../storybookDecorators';
 
 const meta: Meta<BTHeadingProps> = {
   title: 'BTHeading',
+  decorators: [mainDecorator],
 };
 type Story = StoryObj<BTHeadingProps>;
 

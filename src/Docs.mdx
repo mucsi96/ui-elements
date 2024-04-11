@@ -1,0 +1,56 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as HeadingStories from './Heading/Heading.stories';
+import * as BadgeStories from './Badge/Badge.stories';
+import * as ButtonStories from './Button/Button.stories';
+import * as HeaderStories from './Header/Header.stories';
+import * as InputLabelStories from './InputLabel/InputLabel.stories';
+import * as LoaderStories from './Loader/Loader.stories';
+import * as MainStories from './Main/Main.stories';
+import * as NotificationStories from './Notifications/Notifications.stories';
+import * as TableStories from './Table/Table.stories';
+
+<Meta title='' />
+
+# Badge
+
+<Canvas of={BadgeStories.Normal} />
+<Canvas of={BadgeStories.Large} />
+
+# Button
+
+<Canvas of={ButtonStories.Green} />
+<Canvas of={ButtonStories.Red} />
+<Canvas of={ButtonStories.Yellow} />
+
+# Header
+
+<Canvas of={HeaderStories.Default} />
+
+# Heading
+
+<Canvas of={HeadingStories.Level1} />
+<Canvas of={HeadingStories.Level2} />
+<Canvas of={HeadingStories.Level3} />
+<Canvas of={HeadingStories.Level4} />
+
+# Input label
+
+<Canvas of={InputLabelStories.Default} />
+
+# Loader
+
+<Canvas of={LoaderStories.Default} />
+
+# Main
+
+<Canvas of={MainStories.Default} />
+
+# Notifications
+
+<Canvas of={NotificationStories.Default} />
+
+# Table
+
+<Canvas of={TableStories.Default} />
+<Canvas of={TableStories.WithSelection} />

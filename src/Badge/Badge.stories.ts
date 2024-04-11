@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 import { BTBadgeProps } from './Badge';
+import { mainDecorator } from '../storybookDecorators';
 
 const meta: Meta<BTBadgeProps> = {
   title: 'BTBadge',
+  decorators: [mainDecorator],
 };
 type Story = StoryObj<BTBadgeProps>;
 

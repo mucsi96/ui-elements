@@ -12,7 +12,8 @@
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
         "runem.lit-plugin",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "unifiedjs.vscode-mdx"
       ]
     }
   },

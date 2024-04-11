@@ -1,5 +1,5 @@
 import { css, html } from 'lit';
-import { customElement, htmlToString } from './utils';
+import { customElement, htmlToString } from '../utils';
 
 @customElement({
   name: 'bt-row-selector',

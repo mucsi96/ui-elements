@@ -1,5 +1,7 @@
 import { css } from 'lit';
-import { customElement } from './utils';
+import { customElement } from '../utils';
+
+export type BTTableProps = {};
 
 @customElement({
   name: 'bt-table',
@@ -41,8 +43,12 @@ import { customElement } from './utils';
       }
 
       td {
-        padding: 12px 24px;
+        padding: 0 24px;
         border-bottom: 1px solid hsl(217, 19%, 27%);
+
+        &:not([is='bt-row-selector']) {
+          line-height: 52px;
+        }
       }
 
       th[right-align],

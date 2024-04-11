@@ -1,12 +1,13 @@
 import { css, html } from 'lit';
-import './notification';
 import {
   BTNotification,
   ErrorNotificationEvent,
   NotificationEndEvent,
   SuccessNotificationEvent,
-} from './notification';
-import { customElement, htmlToString } from './utils';
+} from './Notification';
+import { customElement, htmlToString } from '../utils';
+
+export type BTNotificationsProps = {};
 
 interface CustomEventMap {
   'success-notification': SuccessNotificationEvent;

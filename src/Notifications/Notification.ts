@@ -1,5 +1,9 @@
 import { css } from 'lit';
-import { customElement } from './utils';
+import { customElement } from '../utils';
+
+export type BTNotificationProps = {
+  type: 'error' | 'success';
+};
 
 export class NotificationEvent extends CustomEvent<string> {
   constructor(name: string, message?: string) {
