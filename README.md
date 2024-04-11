@@ -1,3 +1,3 @@
 # UI Elements
 
-[Storybook](https://mucsi96.github.io/ui-elements)
+[Docs](https://mucsi96.github.io/ui-elements)
