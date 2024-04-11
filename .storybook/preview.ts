@@ -1,4 +1,5 @@
 import { Preview } from '@storybook/web-components';
+import { themes } from '@storybook/theming';
 import { html as beautifyHtml } from 'js-beautify';
 import '../src';
 
@@ -7,6 +8,7 @@ const preview: Preview = {
     layout: 'fullscreen',
     viewMode: 'docs',
     docs: {
+      theme: themes.dark,
       canvas: {
         sourceState: 'shown',
       },

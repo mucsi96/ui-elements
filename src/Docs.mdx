@@ -10,7 +10,7 @@ import * as MainStories from './Main/Main.stories';
 import * as NotificationStories from './Notifications/Notifications.stories';
 import * as TableStories from './Table/Table.stories';
 
-<Meta title='' />
+<Meta title="" />
 
 # Installation
 
@@ -23,7 +23,6 @@ npm install @mucsi96/ui-elements
 ```ts
 import '@mucsi96/ui-elements';
 ```
-
 
 # Badge
 
@@ -61,7 +60,23 @@ import '@mucsi96/ui-elements';
 
 # Notifications
 
-<Canvas of={NotificationStories.Default} />
+<Canvas
+  of={NotificationStories.Default}
+  source={{
+    language: 'html',
+    code: '<section is="bt-notifications"></section>',
+  }}
+/>
+
+```ts
+import {
+  ErrorNotificationEvent,
+  SuccessNotificationEvent,
+} from '@mucsi96/ui-elements';
+
+document.dispatchEvent(new SuccessNotificationEvent('Completed'));
+document.dispatchEvent(new ErrorNotificationEvent('Failure'));
+```
 
 # Table
 

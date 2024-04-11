@@ -22,7 +22,7 @@ class NotificationDocs extends HTMLElement {
         <button type="button" is="bt-button" color="red" id="error">
           Error
         </button>
-      </div>`
+      </div>`,
     );
     this.querySelector('#success')?.addEventListener('click', () => {
       document.dispatchEvent(new SuccessNotificationEvent('Completed'));
@@ -36,13 +36,15 @@ class NotificationDocs extends HTMLElement {
 const meta: Meta<BTNotificationsProps> = {
   title: 'BTNotifications',
   decorators: [mainDecorator],
-  render: () => html`<div>
-    <bt-notifications-docs></bt-notifications-docs>
-    <section is="bt-notifications"></section>
-  </div>`,
 };
 type Story = StoryObj<BTNotificationsProps>;
 
 export default meta;
 
-export const Default: Story = {};
+export const Default: Story = {
+  render: () =>
+    html`<div style="min-height: 300px;">
+      <bt-notifications-docs></bt-notifications-docs>
+      <section is="bt-notifications"></section>
+    </div>`,
+};
