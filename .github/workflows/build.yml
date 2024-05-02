@@ -11,6 +11,7 @@ on:
 jobs:
   publish-npm-package:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
       contents: write
     steps:
@@ -30,7 +31,7 @@ jobs:
       - run: python scripts/publish_npm_package.py ${{ secrets.GITHUB_TOKEN }} ${{ secrets.ANSIBLE_VAULT_KEY }}
   build-storybook:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'push' }}
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -56,6 +57,7 @@ jobs:
           retention-days: 30
   deploy-storybook:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build-storybook
     permissions:
       pages: write      # to deploy to Pages
