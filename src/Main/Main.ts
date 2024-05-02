@@ -16,9 +16,6 @@ export type BTMainProps = {};
 
     :host {
       display: block;
-      background-color: var(--bt-background-color);
-      color: var(--bt-text-color);
-      font-family: var(--bt-font-family);
       padding: 1px 1rem;
       max-width: 90rem;
       margin: 0 auto;
