@@ -15,7 +15,7 @@ export type BTTableProps = {};
         padding: 12px 24px;
         font-weight: 600;
         background-color: hsl(217, 19%, 27%);
-        color: hsl(218, 11%, 65%);
+        color: var(--bt-text-color);
         text-transform: uppercase;
       }
 
@@ -34,7 +34,7 @@ export type BTTableProps = {};
 
         &:has([is='bt-row-selector'][selected]) {
           background-color: hsl(215, 44%, 28%);
-          color: hsl(218, 11%, 65%);
+          color: var(--bt-text-color);
 
           &:hover {
             background-color: hsl(215, 44%, 28%);

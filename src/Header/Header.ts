@@ -16,8 +16,8 @@ export type BTHeaderProps = {
       position: sticky;
       top: 0;
       z-index: 40;
-      font-family: system-ui;
-      font-size: 14px;
+      font-family: var(--bt-font-family);
+      font-size: var(--bt-font-size);
 
       > * {
         padding: 18px 1rem 19px;

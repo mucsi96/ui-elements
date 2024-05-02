@@ -54,8 +54,7 @@ export type BTLoaderProps = {};
   `,
 })
 export class BTLoader extends HTMLDivElement {
-  constructor() {
-    super();
+  connectedCallback() {
     this.innerHTML = htmlToString(html`
       <div></div>
       <div></div>

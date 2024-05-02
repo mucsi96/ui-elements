@@ -19,7 +19,7 @@ export type BTButtonProps = {
       color: white;
       font-weight: 500;
       font-family: inherit;
-      font-size: 14px;
+      font-size: var(--bt-font-size);
       transition: background-color 0.3s;
 
       &:not([disabled]):hover {
@@ -30,7 +30,7 @@ export type BTButtonProps = {
 
       &[disabled] {
         background-color: hsl(215, 28%, 17%);
-        color: hsl(218, 11%, 65%);
+        color: var(--bt-text-color);
         border: 1px solid hsl(215, 14%, 34%);
         pointer-events: none;
       }

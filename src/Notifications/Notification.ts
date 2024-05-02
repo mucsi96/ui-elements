@@ -53,8 +53,8 @@ export class NotificationEndEvent extends NotificationEvent {
 
     :host {
       grid-row-start: -1;
-      font-size: 14px;
-      font-family: system-ui;
+      font-size: var(--bt-font-size);
+      font-family: var(--bt-font-family);
       font-weight: 500;
       display: inline-block;
       border-radius: 8px;

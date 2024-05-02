@@ -1,0 +1,7 @@
+body,
+.docs-story {
+  background-color: var(--bt-background-color);
+  color: var(--bt-text-color);
+  font-family: var(--bt-font-family);
+  font-size: var(--bt-font-size);
+}

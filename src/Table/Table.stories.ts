@@ -1,11 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { mainDecorator } from '../storybookDecorators';
 import { BTTableProps } from './Table';
 
 const meta: Meta<BTTableProps> = {
   title: 'BTTable',
-  decorators: [mainDecorator],
 };
 type Story = StoryObj<BTTableProps>;
 

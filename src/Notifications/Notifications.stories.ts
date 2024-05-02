@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { mainDecorator } from '../storybookDecorators';
 import { BTNotificationsProps } from './Notifications';
 import {
   ErrorNotificationEvent,
@@ -35,7 +34,6 @@ class NotificationDocs extends HTMLElement {
 
 const meta: Meta<BTNotificationsProps> = {
   title: 'BTNotifications',
-  decorators: [mainDecorator],
 };
 type Story = StoryObj<BTNotificationsProps>;
 

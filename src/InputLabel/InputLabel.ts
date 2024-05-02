@@ -13,14 +13,14 @@ export type BTInputLabelProps = {};
       flex-direction: column;
 
       color: white;
-      font-size: 14px;
+      font-size: var(--bt-font-size);
       font-weight: 500;
 
       input {
         background-color: hsl(217, 19%, 27%);
         border: 1px solid hsl(215, 14%, 34%);
         color: white;
-        font-size: 14px;
+        font-size: var(--bt-font-size);
         font-weight: 400;
         font-family: inherit;
         padding: 10px;
