@@ -23,7 +23,7 @@ export type BTBadgeProps = {};
         content: '';
         inset: 0 -0.4em;
         border-radius: 0.6em;
-        background-color: white;
+        background-color: var(--bt-strong-text-color);
         position: absolute;
         z-index: -1;
       }

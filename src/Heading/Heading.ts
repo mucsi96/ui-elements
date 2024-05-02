@@ -9,23 +9,8 @@ export type BTHeadingProps = {};
   styles: css`
     [is="bt-heading"] {
       display: block;
-      color: white;
+      color: var(--bt-strong-text-color);
       margin: unset;
-
-      h1& {
-        font-size: 24px;
-        font-weight: 700;
-      }
-
-      h2& {
-        font-size: 21px;
-        font-weight: 700;
-      }
-
-      h3& {
-        font-size: 16px;
-        font-weight: 700;
-      }
     }
   `,
 })

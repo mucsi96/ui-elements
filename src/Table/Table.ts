@@ -10,6 +10,7 @@ export type BTTableProps = {};
     :host {
       border-collapse: collapse;
       text-align: left;
+      font-size: .85em;
 
       th {
         padding: 12px 24px;

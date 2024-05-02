@@ -9,7 +9,7 @@ import { customElement, htmlToString } from '../utils';
       transition: color 0.3s;
 
       &[selected] {
-        color: white;
+        color: var(--bt-strong-text-color);
       }
 
       svg {

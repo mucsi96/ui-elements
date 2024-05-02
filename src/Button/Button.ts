@@ -16,10 +16,9 @@ export type BTButtonProps = {
       border: 1px solid var(--button-color);
       padding: 10px 20px;
       border-radius: 8px;
-      color: white;
+      color: var(--bt-strong-text-color);
       font-weight: 500;
       font-family: inherit;
-      font-size: var(--bt-font-size);
       transition: background-color 0.3s;
 
       &:not([disabled]):hover {

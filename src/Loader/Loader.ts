@@ -16,7 +16,7 @@ export type BTLoaderProps = {};
       gap: 3px;
 
       div {
-        background-color: white;
+        background-color: var(--bt-strong-text-color);
         opacity: 0.85;
         height: 60px;
         width: 7px;
