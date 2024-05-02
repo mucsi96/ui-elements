@@ -5,8 +5,11 @@ import { BTHeaderProps } from './Header';
 const meta: Meta<BTHeaderProps> = {
   title: 'BTHeader',
   render: () =>
-    html`<header is="bt-header" title="Header title">
-        <h6 is="bt-heading">child text</h6>
+    html`<header is="bt-header">
+        <nav>
+          <a href="/"><h1 is="bt-heading">App</h1></a>
+          <button is="bt-button">Sign in</button>
+        </nav>
       </header>
       <main is="bt-main">
         <h1 is="bt-heading">main text</h1>

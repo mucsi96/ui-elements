@@ -1,5 +1,5 @@
-import { css, html } from 'lit';
-import { customElement, htmlToString } from '../utils';
+import { css } from 'lit';
+import { customElement } from '../utils';
 
 export type BTHeaderProps = {
   title?: string;
@@ -29,17 +29,4 @@ export type BTHeaderProps = {
     }
   `,
 })
-export class BTHeader extends HTMLElement {
-  template = document.createElement('template');
-
-  constructor() {
-    super();
-    this.template.innerHTML = htmlToString(html`
-      <h1 is="bt-heading">${this.title}</h1>
-    `);
-  }
-
-  connectedCallback() {
-    this.firstElementChild?.prepend(this.template.content.cloneNode(true));
-  }
-}
+export class BTHeader extends HTMLElement {}
