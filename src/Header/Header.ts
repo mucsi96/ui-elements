@@ -19,7 +19,7 @@ export type BTHeaderProps = {
       font-family: var(--bt-font-family);
 
       > * {
-        padding: 18px 1rem 19px;
+        padding: 0.75rem 1rem;
         max-width: 90rem;
         margin: 0 auto;
         display: flex;

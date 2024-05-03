@@ -8,10 +8,11 @@ export type BTMainProps = {};
   extends: 'main',
   styles: css`
     :root {
-      --bt-background-color: hsl(222, 47%, 11%);
+      --bt-background-color: hsl(221, 39%, 11%);
       --bt-text-color: hsl(218, 11%, 65%);
       --bt-strong-text-color: white;
       --bt-font-family: system-ui;
+      --bt-link-hover-color: hsl(218, 93%, 61%);
     }
 
     :host {

@@ -11,9 +11,10 @@ const meta: Meta<BTHeaderProps> = {
           <button is="bt-button">Sign in</button>
         </nav>
       </header>
-      <main is="bt-main">
-        <h1 is="bt-heading">main text</h1>
-      </main>`,
+      <div style="min-height: 50px"></div>`,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 type Story = StoryObj<BTHeaderProps>;
 

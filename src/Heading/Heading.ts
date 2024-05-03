@@ -19,7 +19,7 @@ export type BTHeadingProps = {};
       }
 
       a:has(&):hover {
-        --heading-color: var(--bt-text-color);
+        --heading-color: var(--bt-link-hover-color);
       }
     }
   `,

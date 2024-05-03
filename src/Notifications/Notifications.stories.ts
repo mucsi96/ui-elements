@@ -41,8 +41,7 @@ export default meta;
 
 export const Default: Story = {
   render: () =>
-    html`<div style="min-height: 300px;">
-      <bt-notifications-docs></bt-notifications-docs>
+    html` <bt-notifications-docs></bt-notifications-docs>
       <section is="bt-notifications"></section>
-    </div>`,
+      <div style="min-height: 300px;"></div>`,
 };

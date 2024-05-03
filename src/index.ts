@@ -1,5 +1,7 @@
-export * from './Button/Button';
+export * from './Avatar/Avatar';
 export * from './Badge/Badge';
+export * from './Button/Button';
+export * from './DropdownMenu/DropdownMenu';
 export * from './Header/Header';
 export * from './Heading/Heading';
 export * from './InputLabel/InputLabel';
@@ -7,6 +9,7 @@ export * from './Loader/Loader';
 export * from './Main/Main';
 export * from './Notifications/Notification';
 export * from './Notifications/Notifications';
+export * from './Popover/Popover';
 export * from './Table/RowSelector';
 export * from './Table/Table';
 export * from './utils';

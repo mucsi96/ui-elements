@@ -1,13 +1,16 @@
 import { Canvas, Meta } from '@storybook/blocks';
 
+import * as AvatarStories from './Avatar/Avatar.stories';
 import * as HeadingStories from './Heading/Heading.stories';
 import * as BadgeStories from './Badge/Badge.stories';
 import * as ButtonStories from './Button/Button.stories';
+import * as DropdownMenuStories from './DropdownMenu/DropdownMenu.stories'
 import * as HeaderStories from './Header/Header.stories';
 import * as InputLabelStories from './InputLabel/InputLabel.stories';
 import * as LoaderStories from './Loader/Loader.stories';
 import * as MainStories from './Main/Main.stories';
 import * as NotificationStories from './Notifications/Notifications.stories';
+import * as PopoverStories from './Popover/Popover.stories';
 import * as TableStories from './Table/Table.stories';
 
 <Meta title="" />
@@ -33,6 +36,10 @@ body {
 }
 ```
 
+# Avatar
+
+<Canvas of={AvatarStories.Default} />
+
 # Badge
 
 <Canvas of={BadgeStories.Normal} />
@@ -43,6 +50,10 @@ body {
 <Canvas of={ButtonStories.Green} />
 <Canvas of={ButtonStories.Red} />
 <Canvas of={ButtonStories.Yellow} />
+
+# DropdownMenu
+
+<Canvas of={DropdownMenuStories.Default} />
 
 # Header
 
@@ -86,6 +97,10 @@ import {
 document.dispatchEvent(new SuccessNotificationEvent('Completed'));
 document.dispatchEvent(new ErrorNotificationEvent('Failure'));
 ```
+
+# Popover
+
+<Canvas of={PopoverStories.Default} />
 
 # Table
 
