@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import {
-  ErrorNotificationEvent,
-  SuccessNotificationEvent,
-} from './Notification';
+import { ErrorNotificationEvent, SuccessNotificationEvent } from './Notifications';
 
 const meta: Meta = {
   title: 'BTNotifications',
