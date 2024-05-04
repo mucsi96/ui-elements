@@ -1,5 +1,7 @@
-import { customElement } from '../utils';
-import './Popover.css';
+import { customElement, injectStyles } from '../utils';
+import styles from './Popover.css?raw&inline';
+
+injectStyles(styles);
 
 @customElement({
   name: 'bt-popover',

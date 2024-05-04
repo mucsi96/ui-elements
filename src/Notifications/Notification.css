@@ -2,6 +2,7 @@ output[is="bt-notification"] {
   grid-row-start: -1;
   font-family: var(--bt-font-family);
   font-weight: 500;
+  font-size: 0.875rem;
   display: inline-block;
   border-radius: 8px;
   padding: 16px;

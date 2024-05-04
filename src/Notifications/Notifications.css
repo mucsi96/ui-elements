@@ -1,0 +1,10 @@
+section[is='bt-notifications'] {
+  pointer-events: none;
+  position: fixed;
+  z-index: 100;
+  inset: 8px 8px auto 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 16px;
+  align-items: flex-end;
+}

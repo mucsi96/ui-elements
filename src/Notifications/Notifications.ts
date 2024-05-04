@@ -1,13 +1,12 @@
-import { css, html } from 'lit';
+import { customElement, injectStyles } from '../utils';
 import {
-  BTNotification,
   ErrorNotificationEvent,
   NotificationEndEvent,
   SuccessNotificationEvent,
 } from './Notification';
-import { customElement, htmlToString } from '../utils';
+import styles from './Notifications.css?raw&inline';
 
-export type BTNotificationsProps = {};
+injectStyles(styles);
 
 interface CustomEventMap {
   'success-notification': SuccessNotificationEvent;
@@ -18,10 +17,10 @@ declare global {
   interface Document {
     addEventListener<K extends keyof CustomEventMap>(
       type: K,
-      listener: (this: Document, ev: CustomEventMap[K]) => void
+      listener: (this: Document, ev: CustomEventMap[K]) => void,
     ): void;
     dispatchEvent<K extends keyof CustomEventMap>(
-      ev: CustomEventMap[K]
+      ev: CustomEventMap[K],
     ): boolean;
   }
 }
@@ -29,36 +28,19 @@ declare global {
 @customElement({
   name: 'bt-notifications',
   extends: 'section',
-  styles: css`
-    :host {
-      pointer-events: none;
-      position: fixed;
-      z-index: 100;
-      inset: 8px 8px auto 8px;
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 16px;
-      align-items: flex-end;
-    }
-  `,
 })
 export class BTNotifications extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = htmlToString(html`
-      <template>
-        <output is="bt-notification" role="status"></output>
-      </template>
-    `);
     document.addEventListener(
       'success-notification',
       (event: SuccessNotificationEvent) =>
-        this.addNotification('success', event.detail)
+        this.addNotification('success', event.detail),
     );
     document.addEventListener(
       'error-notification',
       (event: ErrorNotificationEvent) =>
-        this.addNotification('error', event.detail)
+        this.addNotification('error', event.detail),
     );
     document.addEventListener(
       'notification-end',
@@ -66,18 +48,16 @@ export class BTNotifications extends HTMLElement {
         if (event.target && event.target instanceof HTMLElement) {
           event.target.remove();
         }
-      }
+      },
     );
   }
 
   addNotification(type: string, text: string) {
     const heightBefore = this.offsetHeight;
-    const notification = this.querySelector(
-      'template'
-    )?.content.firstElementChild?.cloneNode(true) as BTNotification;
-    notification.textContent = text;
-    notification.setAttribute('bt-type', type);
-    this.appendChild(notification);
+    this.insertAdjacentHTML(
+      'beforeend',
+      `<output is="bt-notification" bt-type="${type}">${text}</output>`,
+    );
     const heightAfter = this.offsetHeight;
     const initialOffset = heightBefore - heightAfter;
     this.animate(
@@ -88,7 +68,7 @@ export class BTNotifications extends HTMLElement {
       {
         duration: 150,
         easing: 'ease-out',
-      }
+      },
     );
   }
 }

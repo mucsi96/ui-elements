@@ -1,5 +1,7 @@
-import { customElement } from '../utils';
-import './Notification.css';
+import { customElement, injectStyles } from '../utils';
+import styles from './Notification.css?raw&inline';
+
+injectStyles(styles);
 
 export class NotificationEvent extends CustomEvent<string> {
   constructor(name: string, message?: string) {
@@ -32,7 +34,7 @@ export class NotificationEndEvent extends NotificationEvent {
 export class BTNotification extends HTMLOutputElement {
   connectedCallback() {
     Promise.allSettled(
-      this.getAnimations().map((animation) => animation.finished)
+      this.getAnimations().map((animation) => animation.finished),
     ).then(() => this.dispatchEvent(new NotificationEndEvent()));
   }
 }

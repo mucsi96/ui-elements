@@ -4,6 +4,7 @@ import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
+    target: ['chrome124', 'safari17.3'],
     lib: {
       formats: ['es'],
       entry: resolve(__dirname, 'src/index.ts'),
@@ -12,7 +13,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          lit: ['lit'],
           'custom-elements-polyfill': ['@ungap/custom-elements'],
         },
       },
@@ -20,7 +20,7 @@ export default defineConfig({
   },
   plugins: [
     dts({
-      exclude: "src/**/*.stories.ts",
+      exclude: 'src/**/*.stories.ts',
     }),
   ],
 });

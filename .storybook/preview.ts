@@ -14,7 +14,7 @@ const preview: Preview = {
       },
       source: {
         transform: (source) => {
-          const formattedSource = beautifyHtml(source, {
+          const formattedSource = beautifyHtml(source.replaceAll('=""', ''), {
             indent_size: 2,
           });
           return formattedSource;
