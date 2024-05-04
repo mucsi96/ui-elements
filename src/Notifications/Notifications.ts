@@ -1,17 +1,29 @@
-import { injectStyles, onElementConnected } from '../utils';
-import {
-  ErrorNotificationEvent,
-  NotificationEndEvent,
-  SuccessNotificationEvent,
-} from './Notification';
+import { injectStyles } from '../utils';
 import styles from './Notifications.css?raw&inline';
 
 injectStyles(styles);
 
+export class NotificationEvent extends CustomEvent<string> {
+  constructor(name: string, message?: string) {
+    super(name, { bubbles: true, composed: true, detail: message });
+  }
+}
+
+export class ErrorNotificationEvent extends NotificationEvent {
+  constructor(error: string) {
+    super('bt-error-notification', error);
+  }
+}
+
+export class SuccessNotificationEvent extends NotificationEvent {
+  constructor(message: string) {
+    super('bt-success-notification', message);
+  }
+}
+
 interface CustomEventMap {
-  'success-notification': SuccessNotificationEvent;
-  'error-notification': ErrorNotificationEvent;
-  'notification-end': NotificationEndEvent;
+  'bt-success-notification': SuccessNotificationEvent;
+  'bt-error-notification': ErrorNotificationEvent;
 }
 declare global {
   interface Document {
@@ -25,7 +37,11 @@ declare global {
   }
 }
 
-function addNotification(root: HTMLElement, type: string, text: string) {
+function addNotification(root: Element | null, type: string, text: string) {
+  if (!root || !(root instanceof HTMLElement)) {
+    return;
+  }
+
   const heightBefore = root.offsetHeight;
   root.insertAdjacentHTML(
     'beforeend',
@@ -45,23 +61,21 @@ function addNotification(root: HTMLElement, type: string, text: string) {
   );
 }
 
-onElementConnected('section[bt-notifications]', (element) => {
-  document.addEventListener(
-    'success-notification',
-    (event: SuccessNotificationEvent) =>
-      addNotification(element, 'success', event.detail),
-  );
-  document.addEventListener(
-    'error-notification',
-    (event: ErrorNotificationEvent) =>
-      addNotification(element, 'error', event.detail),
-  );
-  document.addEventListener(
-    'notification-end',
-    (event: NotificationEndEvent) => {
-      if (event.target && event.target instanceof HTMLElement) {
-        event.target.remove();
-      }
-    },
-  );
-});
+document.addEventListener(
+  'bt-success-notification',
+  (event: SuccessNotificationEvent) =>
+    addNotification(
+      document.querySelector('section[bt-notifications]'),
+      'success',
+      event.detail,
+    ),
+);
+document.addEventListener(
+  'bt-error-notification',
+  (event: ErrorNotificationEvent) =>
+    addNotification(
+      document.querySelector('section[bt-notifications]'),
+      'error',
+      event.detail,
+    ),
+);
