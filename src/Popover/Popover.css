@@ -1,0 +1,26 @@
+[popover][is='bt-popover'] {
+  margin: unset;
+  padding: unset;
+  white-space: nowrap;
+  top: calc(var(--trigger-bottom) + 0.5rem);
+  background-color: hsl(217, 19%, 27%);
+  border-radius: 0.5rem;
+  min-width: 11rem;
+  border: none;
+  color: var(--bt-strong-text-color);
+  overflow: hidden;
+
+  &.left {
+    left: var(--trigger-left);
+  }
+
+  &.right {
+    left: var(--trigger-right);
+    transform: translateX(-100%);
+  }
+
+  &.center {
+    left: var(--trigger-center);
+    transform: translateX(-50%);
+  }
+}

@@ -15,10 +15,10 @@ class NotificationDocs extends HTMLElement {
     super();
     this.innerHTML = htmlToString(
       html`<div>
-        <button type="button" is="bt-button" color="green" id="success">
+        <button type="button" bt bt-color="green" id="success">
           Success
         </button>
-        <button type="button" is="bt-button" color="red" id="error">
+        <button type="button" bt bt-color="red" id="error">
           Error
         </button>
       </div>`,

@@ -1,0 +1,42 @@
+output[is="bt-notification"] {
+  grid-row-start: -1;
+  font-family: var(--bt-font-family);
+  font-weight: 500;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 16px;
+  width: 400px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
+  animation:
+    bt-fade-in 0.3s ease,
+    bt-slide-in 0.3s ease,
+    bt-fade-out 0.3s ease 3s forwards;
+
+  &[bt-type='error'] {
+    background-color: hsl(0, 96%, 77%);
+    color: hsl(0, 74%, 16%);
+  }
+
+  &[bt-type='success'] {
+    background-color: hsl(145, 78%, 68%);
+    color: hsl(145, 100%, 14%);
+  }
+}
+
+@keyframes bt-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes bt-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bt-slide-in {
+  from {
+    transform: translateY(-5vh);
+  }
+}

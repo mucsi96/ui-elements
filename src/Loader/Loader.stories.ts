@@ -1,12 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { BTLoaderProps } from './Loader';
 
-const meta: Meta<BTLoaderProps> = {
+const meta: Meta = {
   title: 'BTLoader',
-  render: () => html`<div is="bt-loader"></div>`,
+  render: () =>
+    html`<div role="progressbar" bt>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>`,
 };
-type Story = StoryObj<BTLoaderProps>;
+type Story = StoryObj;
 
 export default meta;
 

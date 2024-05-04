@@ -76,7 +76,7 @@ export class BTNotifications extends HTMLElement {
       'template'
     )?.content.firstElementChild?.cloneNode(true) as BTNotification;
     notification.textContent = text;
-    notification.setAttribute('type', type);
+    notification.setAttribute('bt-type', type);
     this.appendChild(notification);
     const heightAfter = this.offsetHeight;
     const initialOffset = heightBefore - heightAfter;

@@ -1,39 +1,9 @@
-import { css } from 'lit';
 import { customElement } from '../utils';
-
-export type BTPopoverProps = {};
+import './Popover.css';
 
 @customElement({
   name: 'bt-popover',
   extends: 'div',
-  styles: css`
-    :host {
-      margin: unset;
-      padding: unset;
-      white-space: nowrap;
-      top: calc(var(--trigger-bottom) + 0.5rem);
-      background-color: hsl(217, 19%, 27%);
-      border-radius: 0.5rem;
-      min-width: 11rem;
-      border: none;
-      color: var(--bt-strong-text-color);
-      overflow: hidden;
-
-      &.left {
-        left: var(--trigger-left);
-      }
-
-      &.right {
-        left: var(--trigger-right);
-        transform: translateX(-100%);
-      }
-
-      &.center {
-        left: var(--trigger-center);
-        transform: translateX(-50%);
-      }
-    }
-  `,
 })
 export class BTPopover extends HTMLDivElement {
   connectedCallback() {

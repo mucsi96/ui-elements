@@ -1,31 +1,30 @@
 import { spread } from '@open-wc/lit-helpers';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { BTButtonProps } from './Button';
 
-const meta: Meta<BTButtonProps> = {
+const meta: Meta = {
   title: 'BTButton',
   render: (props: any) =>
-    html`<button is="bt-button" ${spread(props)}>Button text</button>`,
+    html`<button bt ${spread(props)}>Button text</button>`,
 };
-type Story = StoryObj<BTButtonProps>;
+type Story = StoryObj;
 
 export default meta;
 
 export const Green: Story = {
   args: {
-    color: 'green',
+    'bt-color': 'green',
   },
 };
 
 export const Red: Story = {
   args: {
-    color: 'red',
+    'bt-color': 'red',
   },
 };
 
 export const Yellow: Story = {
   args: {
-    color: 'yellow',
+    'bt-color': 'yellow',
   },
 };

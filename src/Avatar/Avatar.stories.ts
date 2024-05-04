@@ -1,19 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { BTAvatarProps } from './Avatar';
 
-const meta: Meta<BTAvatarProps> = {
+const meta: Meta = {
   title: 'BTAvatar',
   render: () =>
-    html`<header is="bt-header">
+    html`<header bt>
         <nav>
-          <a href="/"><h1 is="bt-heading">App</h1></a>
+          <a href="/"><h1 bt>App</h1></a>
           <section>
-            <button is="bt-avatar" id="avatar" popovertarget="avatar-popover">
+            <button bt-avatar id="avatar" popovertarget="avatar-popover">
               JD
             </button>
             <div popover id="avatar-popover" is="bt-popover">
-              <ul is="bt-dropdown-menu">
+              <ul bt-dropdown-menu>
                 <li separated>
                   <p>John Doe</p>
                   <p>john.doe@authelia.com</p>
@@ -29,7 +28,7 @@ const meta: Meta<BTAvatarProps> = {
     layout: 'fullscreen',
   },
 };
-type Story = StoryObj<BTAvatarProps>;
+type Story = StoryObj;
 
 export default meta;
 

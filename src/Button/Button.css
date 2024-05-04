@@ -1,0 +1,40 @@
+button[bt] {
+  --button-color: hsl(220, 89%, 53%);
+  --button-hover-color: hsl(221, 79%, 48%);
+  background-color: var(--button-color);
+  border: 1px solid var(--button-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: var(--bt-strong-text-color);
+  font-weight: 500;
+  font-family: inherit;
+  transition: background-color 0.3s;
+
+  &:not([disabled]):hover {
+    background-color: var(--button-hover-color);
+    border: 1px solid var(--button-hover-color);
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    background-color: hsl(215, 28%, 17%);
+    color: var(--bt-text-color);
+    border: 1px solid hsl(215, 14%, 34%);
+    pointer-events: none;
+  }
+
+  &[bt-color='green'] {
+    --button-color: hsl(161, 92%, 25%);
+    --button-hover-color: hsl(163, 93%, 22%);
+  }
+
+  &[bt-color='red'] {
+    --button-color: hsl(0, 75%, 51%);
+    --button-hover-color: hsl(0, 74%, 45%);
+  }
+
+  &[bt-color='yellow'] {
+    --button-color: hsl(42, 93%, 46%);
+    --button-hover-color: hsl(37, 97%, 39%);
+  }
+}

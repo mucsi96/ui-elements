@@ -1,0 +1,20 @@
+h1[bt],
+h2[bt],
+h3[bt],
+h4[bt],
+h5[bt],
+h6[bt] {
+  display: block;
+  color: var(--heading-color, var(--bt-strong-text-color));
+  transition: color 0.3s;
+  margin: unset;
+
+  a:has(&) {
+    color: var(--bt-strong-text-color);
+    text-decoration: none;
+  }
+
+  a:has(&):hover {
+    --heading-color: var(--bt-link-hover-color);
+  }
+}

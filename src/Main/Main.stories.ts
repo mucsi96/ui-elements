@@ -1,15 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { BTMainProps } from './Main';
 
-const meta: Meta<BTMainProps> = {
+const meta: Meta = {
   title: 'BTMain',
-  render: () => html`<main is="bt-main"><h1 is="bt-heading">Heading in main</h1></main>`,
+  render: () => html`<main bt><h1 bt>Heading in main</h1></main>`,
   parameters: {
     layout: 'fullscreen',
-  }
+  },
 };
-type Story = StoryObj<BTMainProps>;
+type Story = StoryObj;
 
 export default meta;
 

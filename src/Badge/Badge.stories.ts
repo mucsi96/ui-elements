@@ -1,18 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { BTBadgeProps } from './Badge';
 
-const meta: Meta<BTBadgeProps> = {
+const meta: Meta = {
   title: 'BTBadge',
 };
-type Story = StoryObj<BTBadgeProps>;
+type Story = StoryObj;
 
 export default meta;
 
 export const Normal: Story = {
-  render: () => html`text<span is="bt-badge">Badge text</span>`,
+  render: () => html`text<span bt-badge>Badge text</span>`,
 };
 
 export const Large: Story = {
-  render: () => html`<h1>text<span is="bt-badge">Badge text</span></h1>`,
+  render: () => html`<h1>text<span bt-badge>Badge text</span></h1>`,
 };

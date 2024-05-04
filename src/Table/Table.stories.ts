@@ -1,17 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { BTTableProps } from './Table';
 
-const meta: Meta<BTTableProps> = {
+const meta: Meta = {
   title: 'BTTable',
 };
-type Story = StoryObj<BTTableProps>;
+type Story = StoryObj;
 
 export default meta;
 
 export const Default: Story = {
   render: () =>
-    html`<table is="bt-table">
+    html`<table bt>
       <thead>
         <tr>
           <th>Person</th>
@@ -46,7 +45,7 @@ export const Default: Story = {
 
 export const WithSelection: Story = {
   render: () =>
-    html`<table is="bt-table">
+    html`<table bt>
       <thead>
         <tr>
           <th></th>
@@ -63,7 +62,7 @@ export const WithSelection: Story = {
           <td>22</td>
         </tr>
         <tr>
-          <td is="bt-row-selector" selected></td>
+          <td is="bt-row-selector" aria-selected="true"></td>
           <td>Dennis</td>
           <td>Web accessibility</td>
           <td>45</td>

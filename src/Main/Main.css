@@ -1,0 +1,14 @@
+:root {
+  --bt-background-color: hsl(221, 39%, 11%);
+  --bt-text-color: hsl(218, 11%, 65%);
+  --bt-strong-text-color: white;
+  --bt-font-family: system-ui;
+  --bt-link-hover-color: hsl(218, 93%, 61%);
+}
+
+main[bt] {
+  display: block;
+  padding: 1px 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}

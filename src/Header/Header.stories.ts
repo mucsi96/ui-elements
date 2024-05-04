@@ -1,14 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { BTHeaderProps } from './Header';
 
-const meta: Meta<BTHeaderProps> = {
+const meta: Meta = {
   title: 'BTHeader',
   render: () =>
-    html`<header is="bt-header">
+    html`<header bt>
         <nav>
-          <a href="/"><h1 is="bt-heading">App</h1></a>
-          <button is="bt-button">Sign in</button>
+          <a href="/"><h1 bt>App</h1></a>
+          <button bt>Sign in</button>
         </nav>
       </header>
       <div style="min-height: 50px"></div>`,
@@ -16,7 +15,7 @@ const meta: Meta<BTHeaderProps> = {
     layout: 'fullscreen',
   },
 };
-type Story = StoryObj<BTHeaderProps>;
+type Story = StoryObj;
 
 export default meta;
 

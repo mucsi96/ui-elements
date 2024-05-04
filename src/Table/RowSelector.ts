@@ -1,22 +1,10 @@
-import { css, html } from 'lit';
+import { html } from 'lit';
 import { customElement, htmlToString } from '../utils';
+import './RowSelector.css';
 
 @customElement({
   name: 'bt-row-selector',
   extends: 'td',
-  styles: css`
-    :host {
-      transition: color 0.3s;
-
-      &[selected] {
-        color: var(--bt-strong-text-color);
-      }
-
-      svg {
-        transform: rotate(-90deg);
-      }
-    }
-  `,
 })
 export class BTRowSelector extends HTMLTableCellElement {
   template = document.createElement('template');
