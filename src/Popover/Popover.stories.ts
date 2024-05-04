@@ -5,7 +5,7 @@ const meta: Meta = {
   title: 'BTPopover',
   render: () =>
     html`<button bt id="trigger" popovertarget="test-popover">Open</button>
-      <div popover id="test-popover" is="bt-popover">
+      <div popover bt id="test-popover">
         <div>Content text</div>
       </div>`,
 };

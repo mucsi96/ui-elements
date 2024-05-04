@@ -1,22 +1,34 @@
-import '@ungap/custom-elements';
-
 export function injectStyles(styles: string) {
   const style = document.createElement('style');
   style.innerHTML = styles;
   document.head.append(style);
 }
 
-type CustomElementOptions = {
-  name: string;
-  extends?: string;
-};
+const listeners: Record<string, (element: HTMLElement) => void> = {};
 
-export function customElement(options: CustomElementOptions) {
-  const { name, extends: extendsTag } = options;
-  return (elementClass: CustomElementConstructor) => {
-    elementClass.prototype.createRenderRoot = function () {
-      return this;
-    };
-    customElements.define(name, elementClass, { extends: extendsTag });
-  };
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === 'childList') {
+      mutation.addedNodes.forEach((node) => {
+        if (node instanceof HTMLElement) {
+          Object.entries(listeners).forEach(([selector, callback]) => {
+            if (node.matches(selector)) {
+              callback(node);
+            }
+          });
+        }
+      });
+    }
+  });
+});
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
+
+export function onElementConnected(
+  selector: string,
+  callback: (element: HTMLElement) => void,
+) {
+  listeners[selector] = callback;
 }

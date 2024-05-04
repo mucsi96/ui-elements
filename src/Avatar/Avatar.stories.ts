@@ -11,7 +11,7 @@ const meta: Meta = {
             <button bt-avatar id="avatar" popovertarget="avatar-popover">
               JD
             </button>
-            <div popover id="avatar-popover" is="bt-popover">
+            <div popover bt id="avatar-popover">
               <ul bt-dropdown-menu>
                 <li separated>
                   <p>John Doe</p>

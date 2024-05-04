@@ -27,7 +27,7 @@ export const Default: Story = {
         <button type="button" bt bt-color="green" id="success">Success</button>
         <button type="button" bt bt-color="red" id="error">Error</button>
       </div>
-      <section is="bt-notifications"></section>
+      <section bt-notifications></section>
       <div style="min-height: 300px;"></div>
     `;
   },

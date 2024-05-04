@@ -7,7 +7,7 @@ const meta: Meta = {
     return html`<button bt type="button" popovertarget="dropdown-menu-popover">
         Open
       </button>
-      <div popover is="bt-popover" id="dropdown-menu-popover">
+      <div popover bt id="dropdown-menu-popover">
         <ul bt-dropdown-menu>
           <li separated>
             <p>John Doe</p>

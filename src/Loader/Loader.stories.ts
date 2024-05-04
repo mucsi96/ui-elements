@@ -4,13 +4,7 @@ import { html } from 'lit';
 const meta: Meta = {
   title: 'BTLoader',
   render: () =>
-    html`<div role="progressbar" bt>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>`,
+    html`<div role="progressbar" bt></div>`,
 };
 type Story = StoryObj;
 

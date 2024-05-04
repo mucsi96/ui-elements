@@ -1,4 +1,4 @@
-import { customElement, injectStyles } from '../utils';
+import { injectStyles, onElementConnected } from '../utils';
 import {
   ErrorNotificationEvent,
   NotificationEndEvent,
@@ -25,50 +25,43 @@ declare global {
   }
 }
 
-@customElement({
-  name: 'bt-notifications',
-  extends: 'section',
-})
-export class BTNotifications extends HTMLElement {
-  constructor() {
-    super();
-    document.addEventListener(
-      'success-notification',
-      (event: SuccessNotificationEvent) =>
-        this.addNotification('success', event.detail),
-    );
-    document.addEventListener(
-      'error-notification',
-      (event: ErrorNotificationEvent) =>
-        this.addNotification('error', event.detail),
-    );
-    document.addEventListener(
-      'notification-end',
-      (event: NotificationEndEvent) => {
-        if (event.target && event.target instanceof HTMLElement) {
-          event.target.remove();
-        }
-      },
-    );
-  }
-
-  addNotification(type: string, text: string) {
-    const heightBefore = this.offsetHeight;
-    this.insertAdjacentHTML(
-      'beforeend',
-      `<output is="bt-notification" bt-type="${type}">${text}</output>`,
-    );
-    const heightAfter = this.offsetHeight;
-    const initialOffset = heightBefore - heightAfter;
-    this.animate(
-      [
-        { transform: `translateY(${initialOffset}px)` },
-        { transform: 'translateY(0)' },
-      ],
-      {
-        duration: 150,
-        easing: 'ease-out',
-      },
-    );
-  }
+function addNotification(root: HTMLElement, type: string, text: string) {
+  const heightBefore = root.offsetHeight;
+  root.insertAdjacentHTML(
+    'beforeend',
+    `<output bt bt-type="${type}">${text}</output>`,
+  );
+  const heightAfter = root.offsetHeight;
+  const initialOffset = heightBefore - heightAfter;
+  root.animate(
+    [
+      { transform: `translateY(${initialOffset}px)` },
+      { transform: 'translateY(0)' },
+    ],
+    {
+      duration: 150,
+      easing: 'ease-out',
+    },
+  );
 }
+
+onElementConnected('section[bt-notifications]', (element) => {
+  document.addEventListener(
+    'success-notification',
+    (event: SuccessNotificationEvent) =>
+      addNotification(element, 'success', event.detail),
+  );
+  document.addEventListener(
+    'error-notification',
+    (event: ErrorNotificationEvent) =>
+      addNotification(element, 'error', event.detail),
+  );
+  document.addEventListener(
+    'notification-end',
+    (event: NotificationEndEvent) => {
+      if (event.target && event.target instanceof HTMLElement) {
+        event.target.remove();
+      }
+    },
+  );
+});

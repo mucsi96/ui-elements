@@ -1,4 +1,4 @@
-section[is='bt-notifications'] {
+section[bt-notifications] {
   pointer-events: none;
   position: fixed;
   z-index: 100;

@@ -1,4 +1,4 @@
-output[is="bt-notification"] {
+output[bt] {
   grid-row-start: -1;
   font-family: var(--bt-font-family);
   font-weight: 500;

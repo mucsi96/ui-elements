@@ -1,9 +1,5 @@
-td[is='bt-row-selector'] {
+td[bt-row-selector] {
   transition: color 0.3s;
-
-  &[aria-selected='true'] {
-    color: var(--bt-strong-text-color);
-  }
 
   svg {
     transform: rotate(-90deg);

@@ -9,14 +9,7 @@ export default defineConfig({
       formats: ['es'],
       entry: resolve(__dirname, 'src/index.ts'),
       fileName: 'index',
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'custom-elements-polyfill': ['@ungap/custom-elements'],
-        },
-      },
-    },
+    }
   },
   plugins: [
     dts({

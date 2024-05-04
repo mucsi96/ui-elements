@@ -16,7 +16,7 @@ table[bt] {
     background-color: hsl(215, 28%, 17%);
     transition: background-color 0.3s;
 
-    &:has([is='bt-row-selector']) {
+    &:has([bt-row-selector]) {
       cursor: pointer;
 
       &:hover {
@@ -24,7 +24,7 @@ table[bt] {
       }
     }
 
-    &:has([is='bt-row-selector'][aria-selected='true']) {
+    &[aria-selected='true'] {
       background-color: hsl(215, 44%, 28%);
       color: var(--bt-text-color);
 
@@ -38,8 +38,12 @@ table[bt] {
     padding: 0 24px;
     border-bottom: 1px solid hsl(217, 19%, 27%);
 
-    &:not([is='bt-row-selector']) {
+    &:not([bt-row-selector]) {
       line-height: 52px;
+    }
+
+    [aria-selected='true'] &[bt-row-selector] {
+      color: var(--bt-strong-text-color);
     }
   }
 

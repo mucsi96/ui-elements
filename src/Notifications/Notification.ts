@@ -1,4 +1,4 @@
-import { customElement, injectStyles } from '../utils';
+import { injectStyles, onElementConnected } from '../utils';
 import styles from './Notification.css?raw&inline';
 
 injectStyles(styles);
@@ -27,14 +27,8 @@ export class NotificationEndEvent extends NotificationEvent {
   }
 }
 
-@customElement({
-  name: 'bt-notification',
-  extends: 'output',
-})
-export class BTNotification extends HTMLOutputElement {
-  connectedCallback() {
-    Promise.allSettled(
-      this.getAnimations().map((animation) => animation.finished),
-    ).then(() => this.dispatchEvent(new NotificationEndEvent()));
-  }
-}
+onElementConnected('output[bt]', (element) => {
+  Promise.allSettled(
+    element.getAnimations().map((animation) => animation.finished),
+  ).then(() => element.dispatchEvent(new NotificationEndEvent()));
+});

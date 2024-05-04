@@ -1,6 +1,6 @@
 # UI Elements
 
-Minimalistic web component based component library.
+Minimalistic component library based on custom attributes proposal from [Web Incubator Community Group (WICG)](https://wicg.io)
 
 Motivation is self-learning.
 
@@ -8,7 +8,8 @@ Motivation is self-learning.
 
 ## Features
 
-- Based on extended builtin HTML elements using [`is`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is) attribute
-- Works in Safari using [Ungap custom elements polyfill](https://www.npmjs.com/package/@ungap/custom-elements)
+- Based on [proposal](https://github.com/WICG/webcomponents/issues/1029) for custom attributes as alternative to customized builtin HTML elements.
+- No dependencies
 - Framework independent
-- Size: ~15 kB (gzip)
+- Accessibility first
+- Size: ~3.7 kB (gzip)

@@ -56,25 +56,25 @@ export const WithSelection: Story = {
       </thead>
       <tbody>
         <tr>
-          <td is="bt-row-selector"></td>
+          <td bt-row-selector></td>
           <td>Chris</td>
           <td>HTML tables</td>
           <td>22</td>
         </tr>
-        <tr>
-          <td is="bt-row-selector" aria-selected="true"></td>
+        <tr aria-selected="true">
+          <td bt-row-selector></td>
           <td>Dennis</td>
           <td>Web accessibility</td>
           <td>45</td>
         </tr>
         <tr>
-          <td is="bt-row-selector"></td>
+          <td bt-row-selector></td>
           <td>Sarah</td>
           <td>JavaScript frameworks</td>
           <td>29</td>
         </tr>
         <tr>
-          <td is="bt-row-selector"></td>
+          <td bt-row-selector></td>
           <td>Karen</td>
           <td>Web performance</td>
           <td>36</td>
