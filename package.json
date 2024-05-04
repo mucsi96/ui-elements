@@ -25,13 +25,16 @@
     "@storybook/web-components": "^8.0.6",
     "@storybook/web-components-vite": "^8.0.6",
     "js-beautify": "^1.15.1",
+    "lit": "^3.1.2",
+    "lit-html": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^8.0.6",
     "typescript": "^5.4.5",
     "vite": "^5.2.8",
-    "vite-plugin-dts": "^3.8.1",
-    "lit": "^3.1.2",
-    "lit-html": "^3.1.2"
+    "vite-plugin-dts": "^3.8.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.17.2"
   }
 }
