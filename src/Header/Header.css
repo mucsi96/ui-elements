@@ -7,12 +7,42 @@ header[bt] {
   z-index: 40;
   font-family: var(--bt-font-family);
 
-  > * {
+  > nav {
     padding: 0.75rem 1rem;
     max-width: 90rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--bt-strong-text-color);
+
+    > ul {
+      list-style-type: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      padding: unset;
+      margin: unset;
+
+      > li {
+        font-size: 1.125rem;
+
+        &:has([bt-logo]) {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-right: 2rem;
+        }
+
+        > a {
+          text-decoration: none;
+          color: inherit;
+
+          &:not([bt-logo]):hover,
+          &[bt-active] {
+            color: var(--bt-link-hover-color);
+          }
+        }
+      }
+    }
   }
 }
