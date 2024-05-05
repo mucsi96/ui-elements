@@ -1,0 +1,23 @@
+[bt-text] {
+  color: hsl(218, 11%, 65%);
+  font-family: system-ui;
+  font-size: unset;
+  font-weight: initial;
+  margin: initial;
+
+  &[bt-green] {
+    color: hsl(111, 32%, 66%);
+  }
+
+  &[bt-red] {
+    color: hsl(0, 91%, 74%);
+  }
+
+  &[bt-white] {
+    color: hsl(216, 12%, 84%);
+  }
+
+  &[bt-blue] {
+    color: hsl(217, 93%, 72%);
+  }
+}

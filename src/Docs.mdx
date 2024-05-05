@@ -12,6 +12,7 @@ import * as MainStories from './Main/Main.stories';
 import * as NotificationStories from './Notifications/Notifications.stories';
 import * as PopoverStories from './Popover/Popover.stories';
 import * as TableStories from './Table/Table.stories';
+import * as TextStories from './Text/Text.stories';
 
 <Meta title="" />
 
@@ -107,3 +108,11 @@ document.dispatchEvent(new ErrorNotificationEvent('Failure'));
 
 <Canvas of={TableStories.Default} />
 <Canvas of={TableStories.WithSelection} />
+
+# Text
+
+<Canvas of={TextStories.Default} />
+<Canvas of={TextStories.Green} />
+<Canvas of={TextStories.Red} />
+<Canvas of={TextStories.White} />
+<Canvas of={TextStories.Blue} />

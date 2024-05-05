@@ -12,4 +12,5 @@ export * from './Notifications/Notifications';
 export * from './Popover/Popover';
 export * from './Table/RowSelector';
 export * from './Table/Table';
+export * from './Text/Text';
 export * from './utils';
