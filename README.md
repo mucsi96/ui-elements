@@ -12,4 +12,4 @@ Motivation is self-learning.
 - No dependencies
 - Framework independent
 - Accessibility first
-- Size: ~3.7 kB (gzip)
+- Size: ~3.8 kB (gzip)
