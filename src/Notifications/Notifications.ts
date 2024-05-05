@@ -45,7 +45,7 @@ function addNotification(root: Element | null, type: string, text: string) {
   const heightBefore = root.offsetHeight;
   root.insertAdjacentHTML(
     'beforeend',
-    `<output bt bt-type="${type}">${text}</output>`,
+    `<output bt bt-${type}>${text}</output>`,
   );
   const heightAfter = root.offsetHeight;
   const initialOffset = heightBefore - heightAfter;

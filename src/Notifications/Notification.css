@@ -13,12 +13,12 @@ output[bt] {
     bt-slide-in 0.3s ease,
     bt-fade-out 0.3s ease 3s forwards;
 
-  &[bt-type='error'] {
+  &[bt-error] {
     background-color: hsl(0, 96%, 77%);
     color: hsl(0, 74%, 16%);
   }
 
-  &[bt-type='success'] {
+  &[bt-success] {
     background-color: hsl(145, 78%, 68%);
     color: hsl(145, 100%, 14%);
   }

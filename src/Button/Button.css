@@ -23,17 +23,17 @@ button[bt] {
     pointer-events: none;
   }
 
-  &[bt-color='green'] {
+  &[bt-green] {
     --button-color: hsl(161, 92%, 25%);
     --button-hover-color: hsl(163, 93%, 22%);
   }
 
-  &[bt-color='red'] {
+  &[bt-red] {
     --button-color: hsl(0, 75%, 51%);
     --button-hover-color: hsl(0, 74%, 45%);
   }
 
-  &[bt-color='yellow'] {
+  &[bt-yellow] {
     --button-color: hsl(42, 93%, 46%);
     --button-hover-color: hsl(37, 97%, 39%);
   }
