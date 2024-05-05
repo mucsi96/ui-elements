@@ -13,7 +13,7 @@ const meta: Meta = {
             </button>
             <div popover bt id="avatar-popover">
               <ul bt-dropdown-menu>
-                <li separated>
+                <li bt-separated>
                   <p>John Doe</p>
                   <p>john.doe@authelia.com</p>
                 </li>

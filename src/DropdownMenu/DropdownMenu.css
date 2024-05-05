@@ -27,7 +27,7 @@ ul[bt-dropdown-menu] {
       --padding-bottom: 0.75rem;
     }
 
-    &[separated] {
+    &[bt-separated] {
       position: relative;
       margin-bottom: var(--separator-gap);
 
@@ -43,7 +43,7 @@ ul[bt-dropdown-menu] {
       }
     }
 
-    [separated] + & {
+    [bt-separated] + & {
       margin-top: var(--separator-gap);
     }
   }

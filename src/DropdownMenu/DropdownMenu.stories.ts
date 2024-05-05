@@ -9,13 +9,13 @@ const meta: Meta = {
       </button>
       <div popover bt id="dropdown-menu-popover">
         <ul bt-dropdown-menu>
-          <li separated>
+          <li bt-separated>
             <p>John Doe</p>
             <p>john.doe@authelia.com</p>
           </li>
           <li><a href="#">Menu item 1</a></li>
           <li><a href="#">Menu item 2</a></li>
-          <li separated><a href="#">Menu item 3</a></li>
+          <li bt-separated><a href="#">Menu item 3</a></li>
           <li><button type="button">Sign out</button></li>
         </ul>
       </div>`;
