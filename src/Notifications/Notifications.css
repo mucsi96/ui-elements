@@ -3,9 +3,10 @@ section[bt-notifications] {
   inset: unset;
   padding: unset;
   top: 0.5rem;
-  right: 0.5rem;;
+  right: 0.5rem;
   height: unset;
   width: 27rem;
+  max-width: calc(100vw - 1rem);
   display: flex;
   flex-direction: column-reverse;
   gap: 16px;
