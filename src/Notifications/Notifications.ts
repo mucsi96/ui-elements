@@ -1,4 +1,4 @@
-import { injectStyles } from '../utils';
+import { injectStyles, onElementConnected } from '../utils';
 import styles from './Notifications.css?raw&inline';
 
 injectStyles(styles);
@@ -79,3 +79,8 @@ document.addEventListener(
       event.detail,
     ),
 );
+
+onElementConnected('section[bt-notifications]', (element) => {
+  element.popover = 'manual';
+  element.showPopover();
+});

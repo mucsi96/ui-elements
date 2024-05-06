@@ -3,10 +3,10 @@ output[bt] {
   font-family: var(--bt-font-family);
   font-weight: 500;
   font-size: 0.875rem;
-  display: inline-block;
-  border-radius: 8px;
-  padding: 16px;
-  width: 400px;
+  display: block;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
   animation:
     bt-fade-in 0.3s ease,

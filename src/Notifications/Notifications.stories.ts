@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { ErrorNotificationEvent, SuccessNotificationEvent } from './Notifications';
+import {
+  ErrorNotificationEvent,
+  SuccessNotificationEvent,
+} from './Notifications';
 
 const meta: Meta = {
   title: 'BTNotifications',
@@ -25,7 +28,7 @@ export const Default: Story = {
         <button type="button" bt bt-red id="error">Error</button>
       </div>
       <section bt-notifications></section>
-      <div style="min-height: 300px;"></div>
     `;
   },
 };
+
