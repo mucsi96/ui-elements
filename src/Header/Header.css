@@ -14,6 +14,7 @@ header[bt] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
     color: var(--bt-strong-text-color);
 
     > ul {
@@ -23,6 +24,11 @@ header[bt] {
       align-items: center;
       padding: unset;
       margin: unset;
+      overflow-x: hidden;
+
+      &.overflowing {
+        visibility: hidden;
+      }
 
       > li {
         font-size: 1.125rem;
