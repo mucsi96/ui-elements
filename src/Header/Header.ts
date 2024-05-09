@@ -8,16 +8,18 @@ onElementConnected('header[bt] > nav', (navigation) => {
   const observer = new IntersectionObserver(
     (entries) => {
       const entry = entries[0];
-      if (entry.isIntersecting) {
-        navigation.classList.remove('overflowing');
-      } else {
+      if (
+        !entry.isIntersecting &&
+        entry.intersectionRect.width !== entry.boundingClientRect.width
+      ) {
         navigation.classList.add('overflowing');
+      } else {
+        navigation.classList.remove('overflowing');
       }
     },
     {
       root: null,
-      rootMargin: '0px 0px 0px 0px',
-      threshold: [0.99],
+      threshold: 1.0,
     },
   );
 
