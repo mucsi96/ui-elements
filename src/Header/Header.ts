@@ -1,16 +1,17 @@
 import { injectStyles, onElementConnected } from '../utils';
 import styles from './Header.css?raw&inline';
+import navbarToggleSvg from './navbar-toggle.svg?raw&inline';
 
 injectStyles(styles);
 
-onElementConnected('header[bt] > nav > ul', (menu) => {
+onElementConnected('header[bt] > nav', (navigation) => {
   const observer = new IntersectionObserver(
     (entries) => {
       const entry = entries[0];
       if (entry.isIntersecting) {
-        menu.classList.remove('overflowing');
+        navigation.classList.remove('overflowing');
       } else {
-        menu.classList.add('overflowing');
+        navigation.classList.add('overflowing');
       }
     },
     {
@@ -20,7 +21,7 @@ onElementConnected('header[bt] > nav > ul', (menu) => {
     },
   );
 
-  const lastLi = menu.querySelector('li:last-child');
+  const lastLi = navigation.querySelector('ul > li:last-child');
 
   if (!lastLi) {
     return;
@@ -28,3 +29,8 @@ onElementConnected('header[bt] > nav > ul', (menu) => {
 
   observer.observe(lastLi);
 });
+
+onElementConnected(
+  '[bt-navbar-toggler]',
+  (button) => (button.innerHTML = navbarToggleSvg),
+);

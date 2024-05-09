@@ -12,9 +12,9 @@ header[bt] {
     max-width: 90rem;
     margin: 0 auto;
     display: flex;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
     color: var(--bt-strong-text-color);
 
     > ul {
@@ -25,30 +25,64 @@ header[bt] {
       padding: unset;
       margin: unset;
       overflow-x: hidden;
-
-      &.overflowing {
-        visibility: hidden;
-      }
+      flex: 1;
 
       > li {
         font-size: 1.125rem;
-
-        &:has([bt-logo]) {
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-right: 2rem;
-        }
 
         > a {
           text-decoration: none;
           color: inherit;
 
-          &:not([bt-logo]):hover,
+          &:hover,
           &[bt-active] {
             color: var(--bt-link-hover-color);
           }
         }
       }
     }
+
+    &:not(.overflowing) {
+      & > ul {
+        margin-right: 3.5rem;
+      }
+
+      [bt-navbar-toggler] {
+        display: none;
+      }
+    }
+
+    &.overflowing {
+      & > ul {
+        visibility: hidden;
+      }
+    }
+  }
+
+  a[bt-logo] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--bt-strong-text-color);
+    margin-right: 3rem;
+  }
+}
+
+button[bt-navbar-toggler] {
+  display: flex;
+  background: unset;
+  padding: 0.5rem;
+  border: unset;
+  border-radius: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--bt-text-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: hsl(218.4, 18.25%, 26.86%);
   }
 }
