@@ -1,16 +1,16 @@
 [role='progressbar'][bt] {
   display: grid;
   justify-content: center;
-  height: 300px;
+  height: 18.75rem;
   align-items: center;
   grid-template-columns: repeat(5, auto);
-  gap: 3px;
+  gap: 0.25rem;
 
   div {
     background-color: var(--bt-strong-text-color);
     opacity: 0.85;
-    height: 60px;
-    width: 7px;
+    height: 3.75rem;
+    width: 0.5rem;
     display: inline-block;
     animation: bt-stretch-delay 1.2s infinite ease-in-out;
 

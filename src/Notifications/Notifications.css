@@ -9,7 +9,7 @@ section[bt-notifications] {
   max-width: calc(100vw - 1rem);
   display: flex;
   flex-direction: column-reverse;
-  gap: 16px;
+  gap: 1rem;
   background-color: unset;
   border: none;
 }
