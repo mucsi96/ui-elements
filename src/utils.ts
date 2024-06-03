@@ -56,5 +56,8 @@ export function onElementConnected(
   selector: string,
   callback: (element: HTMLElement) => void,
 ) {
+  document
+    .querySelectorAll(selector)
+    .forEach((element) => element instanceof HTMLElement && callback(element));
   listeners[selector] = callback;
 }

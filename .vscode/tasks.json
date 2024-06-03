@@ -24,6 +24,18 @@
 			"problemMatcher": [],
 			"label": "npm: start",
 		},
+		{
+			"type": "npm",
+			"script": "build",
+			"problemMatcher": [],
+			"label": "npm: build",
+		},
+		{
+			"type": "npm",
+			"script": "serve:test",
+			"problemMatcher": [],
+			"label": "npm: serve:test",
+		},
     {
       "type": "shell",
       "command": "ansible-vault encrypt vars/vault.yaml --vault-password-file .ansible/vault_key",

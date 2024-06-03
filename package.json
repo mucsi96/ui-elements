@@ -12,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "storybook dev -p 6006",
     "build": "vite build",
-    "build:storybook": "storybook build"
+    "build:storybook": "storybook build",
+    "serve:test": "serve ."
   },
   "keywords": [],
   "author": "Igor Bari <mucsi96@gmail.com>",
@@ -29,12 +30,14 @@
     "lit-html": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "serve": "^14.2.3",
     "storybook": "^8.0.6",
     "typescript": "^5.4.5",
     "vite": "^5.2.8",
     "vite-plugin-dts": "^3.8.1"
   },
   "optionalDependencies": {
+    "@esbuild/darwin-arm64": "^0.21.4",
     "@rollup/rollup-linux-x64-gnu": "^4.17.2"
   }
 }
