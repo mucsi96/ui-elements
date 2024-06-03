@@ -11,5 +11,11 @@
       }
     ],
     "labels": ["dependencies"],
-    "enabledManagers": ["github-actions", "npm", "pip_requirements"]
+    "enabledManagers": ["github-actions", "npm", "pip_requirements"],
+    "pip_requirements": {
+      "enabled": true,
+      "fileMatch": [
+        "requirements.txt"
+      ]
+    },
   }
