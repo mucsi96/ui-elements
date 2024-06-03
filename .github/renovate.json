@@ -10,5 +10,6 @@
         "matchPackagePatterns": ["*"]
       }
     ],
-    "labels": ["dependencies"]
+    "labels": ["dependencies"],
+    "enabledManagers": ["github-actions", "npm", "pip_requirements"]
   }
