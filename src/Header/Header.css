@@ -42,7 +42,7 @@ header[bt] {
       }
     }
 
-    &:not(.overflowing) {
+    &:not(.overflowing):has([bt-navbar-toggler]) {
       & > ul {
         margin-right: 3.5rem;
       }
