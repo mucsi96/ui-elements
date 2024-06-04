@@ -16,9 +16,9 @@ onElementConnected('header[bt] > nav', (navigation) => {
     (entries) => {
       const entry = entries[0];
       if (!entry.isIntersecting) {
-        navigation.classList.add('overflowing');
+        navigation.removeAttribute('bt-large-menu');
       } else {
-        navigation.classList.remove('overflowing');
+        navigation.setAttribute('bt-large-menu', '');
       }
     },
     {
