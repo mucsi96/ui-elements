@@ -6,7 +6,7 @@ header[bt] {
   top: 0;
   z-index: 40;
   font-family: var(--bt-font-family);
-
+  
   > nav {
     padding: 0.75rem 1rem;
     max-width: 90rem;
@@ -16,6 +16,7 @@ header[bt] {
     align-items: center;
     justify-content: space-between;
     color: var(--bt-strong-text-color);
+    min-height: 2.5rem;
 
     > ul {
       list-style-type: none;
