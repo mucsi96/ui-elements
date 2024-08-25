@@ -4,8 +4,8 @@ import { html } from 'lit';
 const meta: Meta = {
   title: 'BTDropdownMenu',
   render: () => {
-    return html`<button bt type="button" popovertarget="dropdown-menu-popover">
-        Open
+    return html`<button bt bt-dropdown type="button" popovertarget="dropdown-menu-popover">
+        Open <svg></svg>
       </button>
       <div popover bt id="dropdown-menu-popover">
         <ul bt-dropdown-menu>

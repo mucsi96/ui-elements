@@ -39,29 +39,42 @@ body {
 
 # Avatar
 
+Selector: `button[bt-avatar]`
+
 <Canvas of={AvatarStories.Default} />
 
 # Badge
+
+Selector: `span[bt-badge]`
 
 <Canvas of={BadgeStories.Normal} />
 <Canvas of={BadgeStories.Large} />
 
 # Button
 
+Selector: `button[bt]`
+
 <Canvas of={ButtonStories.Default} />
 <Canvas of={ButtonStories.Green} />
 <Canvas of={ButtonStories.Red} />
 <Canvas of={ButtonStories.Yellow} />
+<Canvas of={ButtonStories.Dropdown} />
 
 # DropdownMenu
+
+Selector: `ul[bt-dropdown-menu]`
 
 <Canvas of={DropdownMenuStories.Default} />
 
 # Header
 
+Selector: `header[bt]`
+
 <Canvas of={HeaderStories.Default} />
 
 # Heading
+
+Selector: `h1[bt], h2[bt], h3[bt], h4[bt], h5[bt], h6[bt]`
 
 <Canvas of={HeadingStories.Level1} />
 <Canvas of={HeadingStories.Level2} />
@@ -70,17 +83,25 @@ body {
 
 # Input label
 
+Selector: `label[bt]`
+
 <Canvas of={InputLabelStories.Default} />
 
 # Loader
+
+Selector: `[role="progressbar"][bt]`
 
 <Canvas of={LoaderStories.Default} />
 
 # Main
 
+Selector: `main[bt]`
+
 <Canvas of={MainStories.Default} />
 
 # Notifications
+
+Selector: `section[bt-notifications]`
 
 <Canvas
   of={NotificationStories.Default}
@@ -102,14 +123,20 @@ document.dispatchEvent(new ErrorNotificationEvent('Failure'));
 
 # Popover
 
+Selector: `[popover][bt]`
+
 <Canvas of={PopoverStories.Default} />
 
 # Table
+
+Selector: `table[bt]`
 
 <Canvas of={TableStories.Default} />
 <Canvas of={TableStories.WithSelection} />
 
 # Text
+
+Selector: `[bt-text]`
 
 <Canvas of={TextStories.Default} />
 <Canvas of={TextStories.Green} />
