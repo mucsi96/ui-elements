@@ -20,24 +20,24 @@ export const Default: Story = {
       </thead>
       <tbody>
         <tr>
-          <td>Chris</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Chris</td>
           <td>HTML tables</td>
-          <td>22</td>
+          <td bt-center-align>22</td>
         </tr>
         <tr>
-          <td>Dennis</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Dennis</td>
           <td>Web accessibility</td>
-          <td>45</td>
+          <td bt-center-align>45</td>
         </tr>
         <tr>
-          <td>Sarah</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Sarah</td>
           <td>JavaScript frameworks</td>
-          <td>29</td>
+          <td bt-center-align>29</td>
         </tr>
         <tr>
-          <td>Karen</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Karen</td>
           <td>Web performance</td>
-          <td>36</td>
+          <td bt-center-align>36</td>
         </tr>
       </tbody>
     </table>`,
@@ -57,27 +57,27 @@ export const WithSelection: Story = {
       <tbody>
         <tr>
           <td bt-row-selector></td>
-          <td>Chris</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Chris</td>
           <td>HTML tables</td>
-          <td>22</td>
+          <td bt-center-align>22</td>
         </tr>
         <tr aria-selected="true">
           <td bt-row-selector></td>
-          <td>Dennis</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Dennis</td>
           <td>Web accessibility</td>
-          <td>45</td>
+          <td bt-center-align>45</td>
         </tr>
         <tr>
           <td bt-row-selector></td>
-          <td>Sarah</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Sarah</td>
           <td>JavaScript frameworks</td>
-          <td>29</td>
+          <td bt-center-align>29</td>
         </tr>
         <tr>
           <td bt-row-selector></td>
-          <td>Karen</td>
+          <td bt-no-wrap bt-right-align bt-highlighted>Karen</td>
           <td>Web performance</td>
-          <td>36</td>
+          <td bt-center-align>36</td>
         </tr>
       </tbody>
     </table>`,

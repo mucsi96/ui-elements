@@ -47,18 +47,22 @@ table[bt] {
     }
   }
 
-  th[right-align],
-  td[right-align] {
+  td[bt-highlighted] {
+    color: var(--bt-strong-text-color);
+  }
+
+  th[bt-right-align],
+  td[bt-right-align] {
     text-align: right;
   }
 
-  th[center-align],
-  td[center-align] {
+  th[bt-center-align],
+  td[bt-center-align] {
     text-align: center;
   }
 
-  th[no-wrap],
-  td[no-wrap] {
+  th[bt-no-wrap],
+  td[bt-no-wrap] {
     white-space: nowrap;
   }
 }
