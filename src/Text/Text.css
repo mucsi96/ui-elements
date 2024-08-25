@@ -20,4 +20,8 @@
   &[bt-blue] {
     color: hsl(217, 93%, 72%);
   }
+
+  &[bt-yellow] {
+    color: hsl(56, 62%, 70%)
+  }
 }

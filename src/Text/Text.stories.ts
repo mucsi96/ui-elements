@@ -27,3 +27,7 @@ export const White: Story = {
 export const Blue: Story = {
   render: () => html`<h3 bt-text bt-blue>Example text </h3>`,
 };
+
+export const Yellow: Story = {
+  render: () => html`<h3 bt-text bt-yellow>Example text </h3>`,
+};

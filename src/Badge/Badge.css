@@ -1,6 +1,8 @@
 span[bt-badge] {
+  --badge--color: var(--bt-strong-text-color);
+
   position: relative;
-  color: rgb(30, 66, 159);
+  color: hsl(221, 39%, 11%);
   display: inline-block;
   font-weight: 700;
   white-space: nowrap;
@@ -14,8 +16,20 @@ span[bt-badge] {
     content: '';
     inset: 0 -0.4em;
     border-radius: 0.6em;
-    background-color: var(--bt-strong-text-color);
+    background-color: var(--badge--color);
     position: absolute;
     z-index: -1;
+  }
+
+  &[bt-green] {
+    --badge--color: hsl(136, 62%, 45.5%);
+  }
+
+  &[bt-red] {
+    --badge--color: hsl(0, 83%, 62.5%);
+  }
+
+  &[bt-yellow] {
+    --badge--color: hsl(49, 77.5%, 58%);
   }
 }
