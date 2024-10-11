@@ -1,0 +1,13 @@
+a[bt-card] {
+  background-color: hsl(216, 22%, 17%);
+  border: 1px solid hsl(216, 17%, 27%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: initial;
+  text-decoration: initial;
+  display: inline-block;
+
+  &:hover {
+    background-color: hsl(216, 17%, 27%);
+  }
+}

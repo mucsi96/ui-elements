@@ -9,12 +9,12 @@ h6[bt] {
   transition: color 0.3s;
   margin: unset;
 
-  a:has(&) {
+  a:not([bt-card]):has(&) {
     color: var(--bt-strong-text-color);
     text-decoration: none;
   }
 
-  a:has(&):hover {
+  a:not([bt-card]):has(&):hover {
     --heading-color: var(--bt-link-hover-color);
   }
 }
