@@ -1,4 +1,4 @@
-button[bt] {
+button[bt], a[bt-button] {
   --button-color: hsl(220, 89%, 53%);
   --button-hover-color: hsl(221, 79%, 48%);
   background-color: var(--button-color);
@@ -10,6 +10,8 @@ button[bt] {
   font-family: inherit;
   transition: background-color 0.3s;
   white-space: nowrap;
+  text-decoration: inherit;
+  font-size: inherit;
 
   &:not([disabled]):hover {
     background-color: var(--button-hover-color);
@@ -37,6 +39,10 @@ button[bt] {
   &[bt-yellow] {
     --button-color: hsl(42, 93%, 46%);
     --button-hover-color: hsl(37, 97%, 39%);
+  }
+
+  &[bt-small] {
+    font-size: 0.8rem;
   }
 
   &[bt-dropdown] > svg {

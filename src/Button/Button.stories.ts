@@ -12,6 +12,14 @@ export const Default: Story = {
   render: () => html`<button bt>Button text</button>`,
 };
 
+export const Small: Story = {
+  render: () => html`<button bt bt-small>Button text</button>`,
+};
+
+export const Link: Story = {
+  render: () => html`<a href="#" bt-button>Link text</a>`,
+};
+
 export const Green: Story = {
   render: () => html`<button bt bt-green>Button text</button>`,
 };

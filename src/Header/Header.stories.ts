@@ -12,7 +12,7 @@ const meta: Meta = {
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
-          <button bt>Sign in</button>
+          <button bt bt-small>Sign in</button>
           <button bt-navbar-toggler popovertarget="navbar-popover"></button>
           <div popover bt id="navbar-popover">
             <ul bt-dropdown-menu>
